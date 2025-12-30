@@ -1,0 +1,42 @@
+import javax.swing.JOptionPane;
+
+public class Main{
+    public static void main(String[] args){
+        int num1, num2;
+        String name = JOptionPane.showInputDialog("Enter your name");
+        JOptionPane.showMessageDialog(null, "Hello! "+name);
+        JOptionPane.showMessageDialog(null, "Welcome to Calculator App!");
+        JOptionPane.showMessageDialog(null, "Enter 1 for addition, 2 for multiply, 3 for divide, 4 for subtraction");
+        int operation = Integer.parseInt(JOptionPane.showInputDialog("Enter the number for the respective operation "));
+        num1 = Integer.parseInt(JOptionPane.showInputDialog("Enter the first number "));
+        JOptionPane.showMessageDialog(null, "Great! Your 1st number is "+num1);
+        num2 = Integer.parseInt(JOptionPane.showInputDialog("Enter the second number "));
+        JOptionPane.showMessageDialog(null, "Great! The second number is "+num2);
+        if(operation==1){
+            JOptionPane.showMessageDialog(null, num1+"+"+num2+"="+(num1+num2));
+        }
+        else if(operation==2){
+            JOptionPane.showMessageDialog(null, num1+"x"+num2+"="+(num1*num2));
+        }
+        else if(operation==3){
+            if(num1>num2){
+                JOptionPane.showMessageDialog(null, num1+"/"+num2+"="+(num1/num2));
+            }
+            else{
+                JOptionPane.showMessageDialog(null, num1+"/"+num2+"="+(num2/num1));
+            }
+        }
+        else if(operation==4){
+            if(num1>num2){
+                JOptionPane.showMessageDialog(null, num1+"-"+num2+"="+(num1-num2));
+            }
+            else{
+                JOptionPane.showMessageDialog(null, num1+"-"+num2+"="+(num2-num1));
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Invalid number!");
+        }
+
+    }
+}
